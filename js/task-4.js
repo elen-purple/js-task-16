@@ -1,18 +1,20 @@
-const StringBuilder = function (value) {
-  this.value = value;
-  this.append = function (str) {
+class StringBuilder {
+  constructor(value) {
+    this.value = value;
+  }
+  append(str) {
     this.value += str;
     return this.value;
-  };
-  this.prepend = function (str) {
+  }
+  prepend(str) {
     this.value = str + this.value;
     return this.value;
-  };
-  this.pad = function (str) {
+  }
+  pad(str) {
     this.value = str + this.value + str;
     return this.value;
-  };
-};
+  }
+}
 const builder = new StringBuilder(".");
 
 builder.append("^");

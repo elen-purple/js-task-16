@@ -1,14 +1,15 @@
-const User = function ({ name, age, followers } = data) {
-  this.name = name;
-  this.age = age;
-  this.followers = followers;
-  this.getInfo = function () {
+class User {
+  constructor({ name, age, followers }) {
+    this.name = name;
+    this.age = age;
+    this.followers = followers;
+  }
+  getInfo() {
     console.log(
-      `User ${name} is ${age} years old and has ${followers} followers`
+      `User ${this.name} is ${this.age} years old and has ${this.followers} followers`
     );
-  };
-};
-
+  }
+}
 const mango = new User({
   name: "Mango",
   age: 2,

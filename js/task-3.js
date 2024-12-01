@@ -1,17 +1,19 @@
-const Storage = function (items) {
-  this.items = items;
-  this.getItems = function () {
-    return items;
-  };
-  this.addItem = function (item) {
-    items.push(item);
-  };
-  this.removeItem = function (item) {
-    if (items.includes(item)) {
-      items.splice(items.indexOf(item), 1);
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+  getItems() {
+    return this.items;
+  }
+  addItem(item) {
+    this.items.push(item);
+  }
+  removeItem(item) {
+    if (this.items.includes(item)) {
+      this.items.splice(this.items.indexOf(item), 1);
     }
-  };
-};
+  }
+}
 
 const storage = new Storage([
   "Нанітоіди",
